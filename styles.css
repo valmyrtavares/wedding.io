@@ -48,7 +48,7 @@ main {
 }
 
 .text-section {
-flex: 1;    
+    flex: 1;
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -57,8 +57,9 @@ flex: 1;
     z-index: 10;
     animation: slideIn 3s ease-out forwards;
     opacity: 0;
-        /* Animação para mover até a posição final */
+    /* Animação para mover até a posição final */
 }
+
 @keyframes slideIn {
     to {
         transform: translateX(167px);

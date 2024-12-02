@@ -1,0 +1,78 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Lado esquerdo */
+.left {
+  flex: 1;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.video-container {
+  width: 80%;
+  height: 40%;
+  background-color: #e0e0e0;
+  border: 2px dashed #cccccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.video-container:hover {
+  background-color: #d0d0d0;
+}
+
+/* Lado direito */
+.right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -15%;
+  /* Avança sobre o lado esquerdo */
+  width: 117%;
+  /* Ocupa mais do que metade da tela */
+  height: 102%;
+  background: url('https://i.pinimg.com/736x/8b/a8/b3/8ba8b3a96dc4664ab32a795f61c2f0f5.jpg') no-repeat center center/cover;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.content {
+  max-width: 80%;
+  color: black;
+  text-align: left;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
