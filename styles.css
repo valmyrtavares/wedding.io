@@ -1,0 +1,104 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007BFF;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    margin-top: 60px;
+    /* To avoid overlap with the fixed header */
+}
+
+.text-section {
+flex: 1;    
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(10px);
+    z-index: 10;
+    animation: slideIn 3s ease-out forwards;
+    opacity: 0;
+        /* Animação para mover até a posição final */
+}
+@keyframes slideIn {
+    to {
+        transform: translateX(167px);
+        opacity: 1;
+        /* Posição final */
+    }
+}
+
+.text-section h1 {
+    font-size: 57px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.text-section h2 {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.text-section p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.image-section {
+    flex: 2;
+    background: url('https://i.pinimg.com/736x/6e/92/af/6e92afe4f213c9a514881054c9b68e28.jpg') no-repeat center center/cover;
+    opacity: 0.6;
+    /* Reduz a opacidade para deixar a imagem mais clara */
+    position: relative;
+    background-size: 100%;
+    z-index: 1;
+    transition: background-size 0.6s ease-in-out
+        /* Suaviza o efeito de escala */
+}
+
+.image-section:hover {
+    background-size: 110%;
+    /* Aumenta o tamanho da imagem no hover */
+}
