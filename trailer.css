@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: lightblue;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.square {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square:nth-child(1) {
+    background-image: url('https://i.pinimg.com/736x/1b/66/74/1b6674e1a7b67bf3c796f6673b6b9e3e.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+}
+
+.square:nth-child(4) {
+    background-image: url('https://i.pinimg.com/736x/ae/93/60/ae93605ad5dcd21d5acd573426de2102.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+}
+
+.square:nth-child(2),
+.square:nth-child(3) {
+    background-color: #f0f0f0;
+}
+
+.video-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+}
+
+.video-container h1 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.video-container .video {
+    width: 311%;
+    max-width: 700px;
+    aspect-ratio: 16 / 9;
+    background-color: black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    color: white;
+    font-size: 1.5rem;
+    
+}
+
+.video-container .video:hover {
+    border-color: lightblue;
+}
